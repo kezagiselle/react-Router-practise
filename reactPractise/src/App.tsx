@@ -11,6 +11,8 @@ function App() {
   return (
    <BrowserRouter>
    <Routes>
+ {/* root layout */}
+ 
      <Route path='/posts' element={<PostLayout />}>
      <Route index element={<PostsList />} />
      <Route path=':postId' element={<PostDetails />} />
