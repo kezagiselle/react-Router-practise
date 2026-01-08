@@ -1,14 +1,23 @@
-import { useState } from 'react'
 import './App.css'
-import Header from './pages/Header'
+import { Routes, Route, BrowserRouter } from 'react-router-dom'
+import PostLayout from './pages/PostLayout'
+import PostsList from './pages/postsList'
+import PostDetails from './pages/PostDetails'
+import PostComments from './pages/PostComments'
+
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
-    <>
-     <Header />
-    </>
+   <BrowserRouter>
+   <Routes>
+     <Route path='/posts' element={<PostLayout />}>
+     <Route index element={<PostsList />} />
+     <Route path=':postId' element={<PostDetails />} />
+     <Route path=':postId/comments' element={<PostComments />} />
+     </Route>
+   </Routes>
+   </BrowserRouter>
   )
 }
 
