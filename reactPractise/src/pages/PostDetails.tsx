@@ -51,7 +51,7 @@ function PostDetails() {
             <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent"></div>
 
             <span className="absolute top-4 left-4 bg-gradient-to-r from-purple-600 to-green-600 text-white px-4 py-1 rounded-full text-sm font-semibold shadow-lg">
-              Post {index + 1}
+              City {index + 1}
             </span>
           </div>
 
@@ -62,9 +62,9 @@ function PostDetails() {
             </h1>
 
             <p className="text-gray-600 leading-relaxed mb-6">
-              This is a detailed view of post {index + 1}.  
-              You can expand this section with a description, comments, or any
-              dynamic content fetched from an API.
+              This is a detailed view of this city {index + 1}.  
+              among all beautiful places in the world, this city is among my
+              favorite places.
             </p>
 
             {/* Actions */}
