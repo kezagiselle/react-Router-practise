@@ -51,14 +51,14 @@ function PostDetails() {
             <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent"></div>
 
             <span className="absolute top-4 left-4 bg-gradient-to-r from-purple-600 to-green-600 text-white px-4 py-1 rounded-full text-sm font-semibold shadow-lg">
-              City {index + 1}
+              Post {index + 1}
             </span>
           </div>
 
           {/* Content */}
           <div className="p-8">
             <h1 className="text-4xl font-bold text-gray-800 mb-4">
-              Post Title {index + 1}
+              City {index + 1}
             </h1>
 
             <p className="text-gray-600 leading-relaxed mb-6">
