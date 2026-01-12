@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import { Heart, MessageCircle } from 'lucide-react';
+import {Link} from "react-router-dom";
+
 import p3 from '../img/p3.png';
 import p4 from '../img/p4.png';
 import p5 from '../img/p5.png';
@@ -8,6 +10,16 @@ import p8 from '../img/p8.png';
 import p1 from '../img/p1.png';
 
 function PostsList() {
+
+  type Post = {
+    id: number;
+    image: string;
+  };
+
+  const posts: Post[] = [
+   { id: 1, image: p1},
+   { id: 2, image: p3} 
+  ];
   // Define types for the state objects
   const [likes, setLikes] = useState<Record<number, boolean>>({});
   const [messages, setMessages] = useState<Record<number, number>>({});
@@ -88,9 +100,13 @@ function PostsList() {
               </div>
 
               
-              <div className="absolute top-4 left-4 bg-gradient-to-r from-purple-600 to-green-600 text-white px-3 py-1 rounded-full text-sm font-semibold shadow-lg">
-                Post {index + 1}
-              </div>
+             <Link
+             to={`/posts/${index}`}
+             className="absolute top-4 left-4 bg-gradient-to-r from-purple-600 to-green-600 text-white px-3 py-1 rounded-full text-sm font-semibold shadow-lg"
+           >
+           Post {index + 1}
+          </Link>
+
             </div>
           ))}
         </div>
