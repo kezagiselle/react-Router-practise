@@ -27,7 +27,12 @@ function PostsList() {
   const [searchParams, setSearchParams] = useSearchParams();
   const query = searchParams.get("q")|| "";
   
-  const images = [p1, p3, p4, p5, p6, p8];
+  const images: string[] = [p1, p3, p4, p5, p6, p8];
+
+  const filteredImages: string[] = images.filter((_, index) => {
+  const postTitle = `post ${index + 1}`;
+  return postTitle.toLowerCase().includes(query.toLowerCase());
+});
 
   const handleLike = (index: number) => {
     setLikes(prev => ({
@@ -66,8 +71,9 @@ function PostsList() {
 </div>
 
 {/* --- POSTS GRID --- */}
+
 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-  {images.map((img, index) => (
+  {filteredImages.map((img: string, index: number) => (
     <div
       key={index}
       className="group relative bg-white rounded-2xl shadow-lg overflow-hidden transform hover:scale-105 transition-all duration-300 hover:shadow-2xl"
@@ -79,11 +85,9 @@ function PostsList() {
             alt={`Post ${index + 1}`}
             className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
           />
-
           <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent 
                     opacity-0 group-hover:opacity-100 transition-opacity duration-300
-                    pointer-events-none">
-          </div>
+                    pointer-events-none"></div>
         </div>
       </Link>
 
@@ -119,11 +123,9 @@ function PostsList() {
       >
         Post {index + 1}
       </Link>
-
     </div>
   ))}
 </div>
-
       </div>
     </div>
   );
