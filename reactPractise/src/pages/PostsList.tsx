@@ -59,16 +59,21 @@ function PostsList() {
               className="group relative bg-white rounded-2xl shadow-lg overflow-hidden transform hover:scale-105 transition-all duration-300 hover:shadow-2xl"
             >
               
-              <div className="relative aspect-square overflow-hidden">
-                <img 
-                  src={img} 
-                  alt={`Post ${index + 1}`} 
-                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                />
-                
-                
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+           <Link to={`/posts/${index}`}>
+           <div className="relative aspect-square overflow-hidden cursor-pointer">
+        <img 
+          src={img} 
+          alt={`Post ${index + 1}`} 
+          className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+           />
+
+           <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent 
+                    opacity-0 group-hover:opacity-100 transition-opacity duration-300
+                    pointer-events-none">
+               </div>
               </div>
+            </Link>
+
 
               
               <div className="absolute bottom-4 left-0 right-0 px-6 flex items-center justify-between opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-y-4 group-hover:translate-y-0">
