@@ -1,5 +1,5 @@
 import React from 'react'
-import { NavLink } from 'react-router-dom'
+import { NavLink, Outlet } from 'react-router-dom'
 
 function Home() {
   return (
@@ -10,6 +10,8 @@ function Home() {
         <NavLink to='/movies' className="hover:text-red-900 transform hover:scale-130 transition duration-300">Movies</NavLink>
         <NavLink to='/contact' className="hover:text-red-900 transform hover:scale-130 transition duration-300">Contact Us</NavLink>
       </div>
+
+      <Outlet />
     </div>
   )
 }
