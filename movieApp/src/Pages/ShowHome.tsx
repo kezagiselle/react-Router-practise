@@ -24,7 +24,7 @@ const movies: Movie[] = [
 function ShowHome() {
   return (
     <div className="p-8 mt-30">
-      <h1 className="text-3xl font-bold mb-8 text-gray-800 ml-20">
+      <h1 className="text-xl font-bold mb-8 text-gray-800 ml-20 text-red-700">
         Now Showing
       </h1>
 
