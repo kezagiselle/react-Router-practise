@@ -1,5 +1,6 @@
 import React from 'react'
 import { NavLink, Outlet } from 'react-router-dom'
+import ShowHome from './ShowHome'
 
 function Home() {
   return (
@@ -12,6 +13,8 @@ function Home() {
       </div>
 
       <Outlet />
+
+      <ShowHome />
     </div>
   )
 }
