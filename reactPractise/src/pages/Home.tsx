@@ -6,14 +6,14 @@ function Home() {
   return (
     <div>
        <Header />
-
-       
-
+        
        <div className="text-2xl flex justify-end gap-10 mr-80 mt-5 font-semibold ">
        <NavLink to='/about' className=" hover:text-green-600 transform hover:scale-130 transition duration-300">About</NavLink>
        <NavLink to='/posts' className=" hover:text-green-600 transform hover:scale-130 transition duration-300">Posts</NavLink>
        <NavLink to='/contact' className="hover:text-green-600 transform hover:scale-130 transition duration-300">Contact</NavLink>
        </div>
+
+       <h1 className="text-6xl font-bold text-center mt-25 italic">Welcome to my Home Page</h1>
     
     </div>
   )
