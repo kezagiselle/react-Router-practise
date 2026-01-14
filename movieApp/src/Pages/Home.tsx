@@ -1,6 +1,8 @@
 import React from 'react'
 import { NavLink, Outlet } from 'react-router-dom'
 import ShowHome from './ShowHome'
+import { FaSearch } from "react-icons/fa";
+
 
 function Home() {
   return (
@@ -11,9 +13,23 @@ function Home() {
         <NavLink to='/movies' className="hover:text-red-900 transform hover:scale-130 transition duration-300">Movies</NavLink>
         <NavLink to='/contact' className="hover:text-red-900 transform hover:scale-130 transition duration-300">Contact Us</NavLink>
       </div>
+<div className="flex justify-center mt-6 mb-10">
+  <div className="flex items-center w-1/3 md:w-1/4 bg-white rounded-lg overflow-hidden">
+    
+    <span className="px-3 text-gray-500">
+      <FaSearch />
+    </span>
+
+    
+    <input
+      type="text"
+      placeholder="Search movies..."
+      className="flex-1 p-3 text-black placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-red-700 transition"
+    />
+  </div>
+</div>
 
       <Outlet />
-
       <ShowHome />
     </div>
   )

@@ -34,7 +34,7 @@ function ShowHome() {
             key={movie.id}
             className="flex-shrink-0 w-72 cursor-pointer"
           >
-            {/* Card container */}
+            
             <div
               className="
                 relative 
@@ -47,18 +47,18 @@ function ShowHome() {
                 flex items-center justify-center
               "
             >
-              {/* Movie Image */}
+              
               <img
                 src={movie.image}
                 alt={movie.title}
                 className="
                   w-56 h-80 
                   object-cover 
-                  rounded-lg
+                  rounded-lg 
                 "
               />
 
-              {/* Hover overlay */}
+            
               <div
                 className="
                   absolute inset-0 
@@ -83,7 +83,7 @@ function ShowHome() {
 
             {/* Movie info */}
             <div className="mt-4 text-center">
-              <p className="text-base font-semibold text-gray-800">
+              <p className="text-base font-semibold text-white">
                 {movie.title}
               </p>
               <p className="text-sm text-gray-500">
