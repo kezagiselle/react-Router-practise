@@ -81,7 +81,7 @@ function ShowHome() {
               </div>
             </div>
 
-            {/* Movie info */}
+            
             <div className="mt-4 text-center">
               <p className="text-base font-semibold text-white">
                 {movie.title}
